@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D85A82621BD3A47B0038A035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85A82611BD3A47B0038A035 /* AppDelegate.swift */; };
+		D85A82641BD3A47B0038A035 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85A82631BD3A47B0038A035 /* ViewController.swift */; };
+		D85A82671BD3A47C0038A035 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D85A82651BD3A47C0038A035 /* Main.storyboard */; };
+		D85A82691BD3A47C0038A035 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D85A82681BD3A47C0038A035 /* Assets.xcassets */; };
+		D85A82741BD3A47C0038A035 /* RTEPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85A82731BD3A47C0038A035 /* RTEPlayerTests.swift */; };
+		D85A827F1BD3A47C0038A035 /* RTEPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85A827E1BD3A47C0038A035 /* RTEPlayerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D85A82701BD3A47C0038A035 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D85A82561BD3A47B0038A035 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D85A825D1BD3A47B0038A035;
+			remoteInfo = RTEPlayer;
+		};
+		D85A827B1BD3A47C0038A035 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D85A82561BD3A47B0038A035 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D85A825D1BD3A47B0038A035;
+			remoteInfo = RTEPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D85A825E1BD3A47B0038A035 /* RTEPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTEPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D85A82611BD3A47B0038A035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D85A82631BD3A47B0038A035 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D85A82661BD3A47C0038A035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D85A82681BD3A47C0038A035 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D85A826A1BD3A47C0038A035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D85A826F1BD3A47C0038A035 /* RTEPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RTEPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D85A82731BD3A47C0038A035 /* RTEPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTEPlayerTests.swift; sourceTree = "<group>"; };
+		D85A82751BD3A47C0038A035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D85A827A1BD3A47C0038A035 /* RTEPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RTEPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D85A827E1BD3A47C0038A035 /* RTEPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTEPlayerUITests.swift; sourceTree = "<group>"; };
+		D85A82801BD3A47C0038A035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D85A825B1BD3A47B0038A035 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D85A826C1BD3A47C0038A035 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D85A82771BD3A47C0038A035 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D85A82551BD3A47B0038A035 = {
+			isa = PBXGroup;
+			children = (
+				D85A82601BD3A47B0038A035 /* RTEPlayer */,
+				D85A82721BD3A47C0038A035 /* RTEPlayerTests */,
+				D85A827D1BD3A47C0038A035 /* RTEPlayerUITests */,
+				D85A825F1BD3A47B0038A035 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D85A825F1BD3A47B0038A035 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D85A825E1BD3A47B0038A035 /* RTEPlayer.app */,
+				D85A826F1BD3A47C0038A035 /* RTEPlayerTests.xctest */,
+				D85A827A1BD3A47C0038A035 /* RTEPlayerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D85A82601BD3A47B0038A035 /* RTEPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				D85A82611BD3A47B0038A035 /* AppDelegate.swift */,
+				D85A82631BD3A47B0038A035 /* ViewController.swift */,
+				D85A82651BD3A47C0038A035 /* Main.storyboard */,
+				D85A82681BD3A47C0038A035 /* Assets.xcassets */,
+				D85A826A1BD3A47C0038A035 /* Info.plist */,
+			);
+			path = RTEPlayer;
+			sourceTree = "<group>";
+		};
+		D85A82721BD3A47C0038A035 /* RTEPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				D85A82731BD3A47C0038A035 /* RTEPlayerTests.swift */,
+				D85A82751BD3A47C0038A035 /* Info.plist */,
+			);
+			path = RTEPlayerTests;
+			sourceTree = "<group>";
+		};
+		D85A827D1BD3A47C0038A035 /* RTEPlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D85A827E1BD3A47C0038A035 /* RTEPlayerUITests.swift */,
+				D85A82801BD3A47C0038A035 /* Info.plist */,
+			);
+			path = RTEPlayerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D85A825D1BD3A47B0038A035 /* RTEPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D85A82831BD3A47C0038A035 /* Build configuration list for PBXNativeTarget "RTEPlayer" */;
+			buildPhases = (
+				D85A825A1BD3A47B0038A035 /* Sources */,
+				D85A825B1BD3A47B0038A035 /* Frameworks */,
+				D85A825C1BD3A47B0038A035 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RTEPlayer;
+			productName = RTEPlayer;
+			productReference = D85A825E1BD3A47B0038A035 /* RTEPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D85A826E1BD3A47C0038A035 /* RTEPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D85A82861BD3A47C0038A035 /* Build configuration list for PBXNativeTarget "RTEPlayerTests" */;
+			buildPhases = (
+				D85A826B1BD3A47C0038A035 /* Sources */,
+				D85A826C1BD3A47C0038A035 /* Frameworks */,
+				D85A826D1BD3A47C0038A035 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D85A82711BD3A47C0038A035 /* PBXTargetDependency */,
+			);
+			name = RTEPlayerTests;
+			productName = RTEPlayerTests;
+			productReference = D85A826F1BD3A47C0038A035 /* RTEPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D85A82791BD3A47C0038A035 /* RTEPlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D85A82891BD3A47C0038A035 /* Build configuration list for PBXNativeTarget "RTEPlayerUITests" */;
+			buildPhases = (
+				D85A82761BD3A47C0038A035 /* Sources */,
+				D85A82771BD3A47C0038A035 /* Frameworks */,
+				D85A82781BD3A47C0038A035 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D85A827C1BD3A47C0038A035 /* PBXTargetDependency */,
+			);
+			name = RTEPlayerUITests;
+			productName = RTEPlayerUITests;
+			productReference = D85A827A1BD3A47C0038A035 /* RTEPlayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D85A82561BD3A47B0038A035 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Paolo;
+				TargetAttributes = {
+					D85A825D1BD3A47B0038A035 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					D85A826E1BD3A47C0038A035 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = D85A825D1BD3A47B0038A035;
+					};
+					D85A82791BD3A47C0038A035 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = D85A825D1BD3A47B0038A035;
+					};
+				};
+			};
+			buildConfigurationList = D85A82591BD3A47B0038A035 /* Build configuration list for PBXProject "RTEPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D85A82551BD3A47B0038A035;
+			productRefGroup = D85A825F1BD3A47B0038A035 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D85A825D1BD3A47B0038A035 /* RTEPlayer */,
+				D85A826E1BD3A47C0038A035 /* RTEPlayerTests */,
+				D85A82791BD3A47C0038A035 /* RTEPlayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D85A825C1BD3A47B0038A035 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D85A82691BD3A47C0038A035 /* Assets.xcassets in Resources */,
+				D85A82671BD3A47C0038A035 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D85A826D1BD3A47C0038A035 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D85A82781BD3A47C0038A035 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D85A825A1BD3A47B0038A035 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D85A82641BD3A47B0038A035 /* ViewController.swift in Sources */,
+				D85A82621BD3A47B0038A035 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D85A826B1BD3A47C0038A035 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D85A82741BD3A47C0038A035 /* RTEPlayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D85A82761BD3A47C0038A035 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D85A827F1BD3A47C0038A035 /* RTEPlayerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D85A82711BD3A47C0038A035 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D85A825D1BD3A47B0038A035 /* RTEPlayer */;
+			targetProxy = D85A82701BD3A47C0038A035 /* PBXContainerItemProxy */;
+		};
+		D85A827C1BD3A47C0038A035 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D85A825D1BD3A47B0038A035 /* RTEPlayer */;
+			targetProxy = D85A827B1BD3A47C0038A035 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D85A82651BD3A47C0038A035 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D85A82661BD3A47C0038A035 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D85A82811BD3A47C0038A035 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		D85A82821BD3A47C0038A035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D85A82841BD3A47C0038A035 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = RTEPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paolomanna.RTEPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D85A82851BD3A47C0038A035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = RTEPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paolomanna.RTEPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D85A82871BD3A47C0038A035 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RTEPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paolomanna.RTEPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RTEPlayer.app/RTEPlayer";
+			};
+			name = Debug;
+		};
+		D85A82881BD3A47C0038A035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RTEPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paolomanna.RTEPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RTEPlayer.app/RTEPlayer";
+			};
+			name = Release;
+		};
+		D85A828A1BD3A47C0038A035 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RTEPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paolomanna.RTEPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RTEPlayer;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		D85A828B1BD3A47C0038A035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RTEPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paolomanna.RTEPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RTEPlayer;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D85A82591BD3A47B0038A035 /* Build configuration list for PBXProject "RTEPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D85A82811BD3A47C0038A035 /* Debug */,
+				D85A82821BD3A47C0038A035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D85A82831BD3A47C0038A035 /* Build configuration list for PBXNativeTarget "RTEPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D85A82841BD3A47C0038A035 /* Debug */,
+				D85A82851BD3A47C0038A035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D85A82861BD3A47C0038A035 /* Build configuration list for PBXNativeTarget "RTEPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D85A82871BD3A47C0038A035 /* Debug */,
+				D85A82881BD3A47C0038A035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D85A82891BD3A47C0038A035 /* Build configuration list for PBXNativeTarget "RTEPlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D85A828A1BD3A47C0038A035 /* Debug */,
+				D85A828B1BD3A47C0038A035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D85A82561BD3A47B0038A035 /* Project object */;
+}
