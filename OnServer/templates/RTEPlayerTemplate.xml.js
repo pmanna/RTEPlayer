@@ -23,46 +23,46 @@ THE SOFTWARE.
 */
 
 var Template = function(showLists) {
-  var result    = `<?xml version="1.0" encoding="UTF-8" ?>
-  <document>
-    <catalogTemplate>
-      <banner>
-        <title>RTÉ Player</title>
-      </banner>
-      <list>`;
+	var result	= `<?xml version="1.0" encoding="UTF-8" ?>
+	<document>
+		<catalogTemplate>
+			<banner>
+				<title>RTÉ Player</title>
+			</banner>
+			<list>`;
 
-    for (ii = 0; ii < showLists.length; ii++) {
-      var showList  = showLists[ii];
-      
-      result +=  `<section> 
-          <listItemLockup> 
-            <title>${showList.title}</title>
-            <decorationLabel>${showList.shows.length}</decorationLabel>
-            <relatedContent> 
-              <grid>
-                <section>`;
+	for (ii = 0; ii < showLists.length; ii++) {
+		var showList	= showLists[ii];
+		
+		result	+= `<section> 
+				<listItemLockup> 
+					<title>${showList.title}</title>
+					<decorationLabel>${showList.shows.length}</decorationLabel>
+					<relatedContent> 
+						<grid>
+							<section>`;
 
-      for (var jj = 0; jj < showList.shows.length; jj++) {
-          var item      = showList.shows[jj];
-          var itemDesc  =  `<lockup showid="${item.showid}">
-                                <title>${item.title}</title>
-                                <img src="${this.IMAGEURL}${item.thumbnail}-320.jpg" width="320" height="180" />
-                                <description>${item.description}</description>
-                              </lockup>`;
+		for (var jj = 0; jj < showList.shows.length; jj++) {
+			var item			= showList.shows[jj];
+			var itemDesc	= `<lockup showid="${item.showid}">
+									<title>${item.title}</title>
+									<img src="${this.IMAGEURL}${item.thumbnail}-320.jpg" width="320" height="180" />
+									<description>${item.description}</description>
+								</lockup>`;
 
-          result += itemDesc;
-      }
+			result	+= itemDesc;
+		}
 
-      result += `</section>
-              </grid>
-            </relatedContent>
-          </listItemLockup>
-        </section>`;
-    }
-    
-    result +=  `</list>
-    </catalogTemplate>
-  </document>`;
+		result	+= `</section>
+						</grid>
+					</relatedContent>
+				</listItemLockup>
+			</section>`;
+	}
+	
+	result	+= `</list>
+		</catalogTemplate>
+	</document>`;
 
-  return result;
+	return result;
 }

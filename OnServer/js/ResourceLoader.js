@@ -23,39 +23,39 @@ THE SOFTWARE.
 */
 
 function ResourceLoader(options) {
-  this.BASEURL = options.BASEURL;
-  this.IMAGEURL = options.IMAGEURL;
-  this.STREAMURL = options.STREAMURL;
+	this.BASEURL = options.BASEURL;
+	this.IMAGEURL = options.IMAGEURL;
+	this.STREAMURL = options.STREAMURL;
 }
  
 ResourceLoader.prototype.loadTemplate = function(resource, showList, callback) {
-  var self = this;
-  evaluateScripts([resource], function(success) {
-    if(success) {
-      var resource = Template.call(self, showList);
-      
-      callback.call(self, resource);
-    } else {
-      var title = "Resource Loader Error",
-        description = `Error loading resource '${resource}'. \n\n Try again later.`,
-        alert = createAlert(title, description);
+	var self = this;
+	evaluateScripts([resource], function(success) {
+		if(success) {
+			var resource = Template.call(self, showList);
+			
+			callback.call(self, resource);
+		} else {
+			var title = "Resource Loader Error",
+				description = `Error loading resource '${resource}'. \n\n Try again later.`,
+				alert = createAlert(title, description);
 
-      navigationDocument.presentModal(alert);
-    }
-  }); 
+			navigationDocument.presentModal(alert);
+		}
+	}); 
 }
 
 ResourceLoader.prototype.loadFeed = function(url, callback) {
-  var xmlhttp = new XMLHttpRequest();
+	var xmlhttp = new XMLHttpRequest();
 
-  xmlhttp.onreadystatechange = function() {
-    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        var resultObj = JSON.parse(xmlhttp.responseText);
-
-        callback(resultObj);
-    }
-  }
-
-  xmlhttp.open("GET", url, true);
-  xmlhttp.send();
+	xmlhttp.onreadystatechange = function() {
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+			var resultObj = JSON.parse(xmlhttp.responseText);
+			
+			callback(resultObj);
+		}
+	}
+	
+	xmlhttp.open("GET", url, true);
+	xmlhttp.send();
 }
