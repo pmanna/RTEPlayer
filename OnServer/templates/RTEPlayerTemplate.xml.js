@@ -22,38 +22,45 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-var Template = function(showList) {
-    var result    = `<?xml version="1.0" encoding="UTF-8" ?>
+var Template = function(showLists) {
+  var result    = `<?xml version="1.0" encoding="UTF-8" ?>
   <document>
     <catalogTemplate>
       <banner>
         <title>RTÉ Player</title>
       </banner>
-      <list> 
-        <section> 
+      <list>`;
+
+    for (ii = 0; ii < showLists.length; ii++) {
+      var showList  = showLists[ii];
+      
+      result +=  `<section> 
           <listItemLockup> 
-            <title>RTÉ Latest</title>
-            <decorationLabel>${showList.length}</decorationLabel>
+            <title>${showList.title}</title>
+            <decorationLabel>${showList.shows.length}</decorationLabel>
             <relatedContent> 
               <grid>
                 <section>`;
 
-    for (var ii = 0; ii < showList.length; ii++) {
-        var item         = showList[ii];
-        var itemDesc    =  `<lockup showid="${item.showid}">
+      for (var jj = 0; jj < showList.shows.length; jj++) {
+          var item      = showList.shows[jj];
+          var itemDesc  =  `<lockup showid="${item.showid}">
                                 <title>${item.title}</title>
                                 <img src="${this.IMAGEURL}${item.thumbnail}-320.jpg" width="320" height="180" />
                                 <description>${item.description}</description>
-                              </lockup>`
-        result += itemDesc;
-    }
+                              </lockup>`;
 
-    result += `</section>
+          result += itemDesc;
+      }
+
+      result += `</section>
               </grid>
             </relatedContent>
           </listItemLockup>
-        </section>
-      </list>
+        </section>`;
+    }
+    
+    result +=  `</list>
     </catalogTemplate>
   </document>`;
 

@@ -32,21 +32,33 @@ THE SOFTWARE.
   var globalConf  = `${options.CONFURL}applications/player/config/config-ios-1-8.js`;
   var playerConf  = `${options.CONFURL}player/ie/features.js?platform=iphone`;
 
-  var latestFeed  = `${options.FEEDURL}rteavgen/player/latestfront/?format=json&type=mobile-iptv&limit=24&cl=0`;
+  var frontFeed   = `${options.FEEDURL}rteavgen/player/latestfront/?format=json&type=mobile-iptv&cl=0`;
+  var latestFeed  = `${options.FEEDURL}rteavgen/player/latest/?format=json&type=mobile-iptv&cl=0`;
+  var popularFeed = `${options.FEEDURL}rteavgen/player/chart/?format=json&type=mobile-iptv&cl=0`;
   var videoFeed   = `${options.FEEDURL}rteavgen/player/playlist/?type=mobile-iptv&format=json&showId=`;
   
   evaluateScripts(javascriptFiles, function(success) {
     if (success) {
+      var showLists = [];
+
       resourceLoader = new ResourceLoader(options);
 
-      resourceLoader.loadFeed(latestFeed, function(latestShows) {
-        var showList    = latestShows.shows;
+      resourceLoader.loadFeed(frontFeed, function(frontShows) {
+        showLists[0]  = {title: frontShows.feed_title, shows: frontShows.shows};
 
-        resourceLoader.loadTemplate(`${options.BASEURL}templates/RTEPlayerTemplate.xml.js`, showList, function(resource) {
-          var doc = Presenter.makeDocument(resource, videoFeed);
+        resourceLoader.loadFeed(latestFeed, function(latestShows) {
+          showLists[1]  = {title: latestShows.feed_title, shows: latestShows.shows};
 
-          doc.addEventListener("select", Presenter.load.bind(Presenter));
-          Presenter.pushDocument(doc);
+          resourceLoader.loadFeed(popularFeed, function(popularShows) {
+            showLists[2]  = {title: popularShows.feed_title, shows: popularShows.shows};
+
+            resourceLoader.loadTemplate(`${options.BASEURL}templates/RTEPlayerTemplate.xml.js`, showLists, function(resource) {
+              var doc = Presenter.makeDocument(resource, videoFeed);
+
+              doc.addEventListener("select", Presenter.load.bind(Presenter));
+              Presenter.pushDocument(doc);
+            });
+          });
         });
       })
     } else {
