@@ -25,5 +25,5 @@ I haven't tried to connect from outside Ireland, so it may also be the case that
 ##TODO
 
  - I don't know the kind of support the TVJS framework has for Promises (a.k.a Futures), so the progressive loading of the feeds is a bit ugly right now
-  - The feeds are also not refreshed automatically: it may be good to add that as well
+ - The feeds are also not refreshed automatically: it may be good to add that as well
   
