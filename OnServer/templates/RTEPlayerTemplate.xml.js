@@ -29,7 +29,10 @@ var Template = function(showLists) {
 			<banner>
 				<title>RTÉ Player</title>
 			</banner>
-			<list>`;
+			<list>
+				<header>
+					<title>Channels</title>
+				</header>`;
 
 	for (ii = 0; ii < showLists.length; ii++) {
 		var showList	= showLists[ii];

@@ -2,7 +2,7 @@
 
 This project is an experiment to understand how a tvOS app would work.
 
-It's loosely based over [this Ray Wenderlich tutorial](http://www.raywenderlich.com/114886/beginning-tvos-development-with-tvml-tutorial), but I wanted to try it on a _real_ feed, so I've turned to the [Ireland's RTÉ](http://www.rte.ie) feeds, as used by their mobile app.
+It's loosely based over [this Ray Wenderlich tutorial](http://www.raywenderlich.com/114886/beginning-tvos-development-with-tvml-tutorial), that in turn was based on Apple's own [TVML Catalog](https://developer.apple.com/library/prerelease/tvos/samplecode/TVMLCatalog/Introduction/Intro.html), but I wanted to try it on a _real_ feed, so I've turned to the [Ireland's RTÉ](http://www.rte.ie) feeds, as used by their mobile app.
 
 ---
 
