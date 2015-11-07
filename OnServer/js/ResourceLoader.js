@@ -26,6 +26,7 @@ function ResourceLoader(options) {
 	this.BASEURL = options.BASEURL;
 	this.IMAGEURL = options.IMAGEURL;
 	this.STREAMURL = options.STREAMURL;
+	this.LIVEURL = options.LIVEURL;
 }
  
 ResourceLoader.prototype.loadTemplate = function(resource, showList, callback) {

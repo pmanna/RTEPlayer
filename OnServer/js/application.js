@@ -23,7 +23,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-	App.onLaunch = function(options) {
+var resourceLoader;
+
+App.onLaunch = function(options) {
 	var javascriptFiles = [
 		`${options.BASEURL}js/ResourceLoader.js`, 
 		`${options.BASEURL}js/Presenter.js`
@@ -32,35 +34,53 @@ THE SOFTWARE.
 	var globalConf  = `${options.CONFURL}applications/player/config/config-ios-1-8.js`;
 	var playerConf  = `${options.CONFURL}player/ie/features.js?platform=iphone`;
 
-	var frontFeed   = `${options.FEEDURL}rteavgen/player/latestfront/?format=json&type=mobile-iptv&cl=0`;
-	var latestFeed  = `${options.FEEDURL}rteavgen/player/latest/?format=json&type=mobile-iptv&cl=0`;
-	var popularFeed = `${options.FEEDURL}rteavgen/player/chart/?format=json&type=mobile-iptv&cl=0`;
-	var videoFeed   = `${options.FEEDURL}rteavgen/player/playlist/?type=mobile-iptv&format=json&showId=`;
+	var frontFeed   = `${options.FEEDURL}rteavgen/player/latestfront/?format=json&type=mobile-iptv&platform=ipad&cl=0`;
+	var latestFeed  = `${options.FEEDURL}rteavgen/player/latest/?format=json&type=mobile-iptv&platform=ipad&cl=0`;
+	var popularFeed = `${options.FEEDURL}rteavgen/player/chart/?format=json&type=mobile-iptv&platform=ipad&cl=0`;
+	var videoFeed   = `${options.FEEDURL}rteavgen/player/playlist/?type=mobile-iptv&format=json&platform=ipad&showId=`;
+
+	var feedIdx;
+	var showLists = [];
+
+	var fetchFeed	= function(idx, someShows) {
+		showLists[idx]  = {title: someShows.feed_title, shows: someShows.shows};
+
+		if (++feedIdx == 3) {
+			resourceLoader.loadTemplate(`${options.BASEURL}templates/RTEPlayerTemplate.xml.js`, showLists, function(resource) {
+				var doc = Presenter.makeDocument(resource, videoFeed);
+
+				doc.addEventListener("select", Presenter.load.bind(Presenter));
+				Presenter.pushDocument(doc);
+			});
+		}
+	}
+
+	if (!String.prototype.encodeHTML) {
+	  String.prototype.encodeHTML = function () {
+	    return this.replace(/&/g, '&amp;')
+	               .replace(/</g, '&lt;')
+	               .replace(/>/g, '&gt;')
+	               .replace(/"/g, '&quot;')
+	               .replace(/'/g, '&apos;');
+	  };
+	}
 	
 	evaluateScripts(javascriptFiles, function(success) {
 		if (success) {
-			var showLists = [];
+
+			feedIdx	= 0;
 
 			resourceLoader = new ResourceLoader(options);
 
 			resourceLoader.loadFeed(frontFeed, function(frontShows) {
-				showLists[0]  = {title: frontShows.feed_title, shows: frontShows.shows};
-
-				resourceLoader.loadFeed(latestFeed, function(latestShows) {
-					showLists[1]  = {title: latestShows.feed_title, shows: latestShows.shows};
-
-					resourceLoader.loadFeed(popularFeed, function(popularShows) {
-						showLists[2]  = {title: popularShows.feed_title, shows: popularShows.shows};
-
-						resourceLoader.loadTemplate(`${options.BASEURL}templates/RTEPlayerTemplate.xml.js`, showLists, function(resource) {
-							var doc = Presenter.makeDocument(resource, videoFeed);
-
-							doc.addEventListener("select", Presenter.load.bind(Presenter));
-							Presenter.pushDocument(doc);
-						});
-					});
-				});
-			})
+				fetchFeed(0, frontShows);
+			});
+			resourceLoader.loadFeed(latestFeed, function(latestShows) {
+				fetchFeed(1, latestShows);
+			});
+			resourceLoader.loadFeed(popularFeed, function(popularShows) {
+				fetchFeed(2, popularShows);
+			});
 		} else {
 			var errorDoc = createAlert("Evaluate Scripts Error", "Error attempting to evaluate external JavaScript files.");
 			
@@ -68,7 +88,7 @@ THE SOFTWARE.
 		}
 	});
 }
- 
+
 var createAlert = function(title, description) {
 	var alertString = `<?xml version="1.0" encoding="UTF-8" ?>
 		<document>
@@ -79,9 +99,10 @@ var createAlert = function(title, description) {
 						<text>OK</text>
 					</button>
 			</alertTemplate>
-		</document>`
+		</document>`;
 
 		var parser = new DOMParser();
 		var alertDoc = parser.parseFromString(alertString, "application/xml");
-		return alertDoc
+		
+		return alertDoc;
 }

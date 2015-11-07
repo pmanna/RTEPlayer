@@ -36,10 +36,11 @@ var Template = function(showLists) {
 
 	for (ii = 0; ii < showLists.length; ii++) {
 		var showList	= showLists[ii];
-		
+		var title			= showList.title.encodeHTML();
+
 		result	+= `<section> 
 				<listItemLockup> 
-					<title>${showList.title}</title>
+					<title>${title}</title>
 					<decorationLabel>${showList.shows.length}</decorationLabel>
 					<relatedContent> 
 						<grid>
@@ -47,10 +48,13 @@ var Template = function(showLists) {
 
 		for (var jj = 0; jj < showList.shows.length; jj++) {
 			var item			= showList.shows[jj];
+			var itemTitle	= item.title.encodeHTML();
+			var itemDesc	= item.description.encodeHTML();
+
 			var itemDesc	= `<lockup showid="${item.showid}">
-									<title>${item.title}</title>
+									<title>${itemTitle}</title>
 									<img src="${this.IMAGEURL}${item.thumbnail}-320.jpg" width="320" height="180" />
-									<description>${item.description}</description>
+									<description>${itemDesc}</description>
 								</lockup>`;
 
 			result	+= itemDesc;
@@ -62,6 +66,32 @@ var Template = function(showLists) {
 				</listItemLockup>
 			</section>`;
 	}
+
+	// Live feeds
+	result	+= `<section> 
+			<listItemLockup> 
+				<title>Live</title>
+				<decorationLabel>3</decorationLabel>
+				<relatedContent> 
+					<grid>
+						<section>
+							<lockup showurl="${this.LIVEURL}hls-live/_definst_/rte1/rte1-720.m3u8">
+								<title>RTÉ ONE</title>
+								<img src="${this.BASEURL}images/rteone.jpg" width="320" height="180" />
+							</lockup>
+							<lockup showurl="${this.LIVEURL}hls-live/_definst_/rte2/rte2-720.m3u8">
+								<title>RTÉ 2</title>
+								<img src="${this.BASEURL}images/rte2.jpg" width="320" height="180" />
+							</lockup>
+							<lockup showurl="${this.LIVEURL}hls-live/_definst_/newsnow/newsnow-576.m3u8">
+								<title>RTÉ NewsNow</title>
+								<img src="${this.BASEURL}images/rtenews.jpg" width="320" height="180" />
+							</lockup>
+						</section>
+					</grid>
+				</relatedContent>
+			</listItemLockup>
+		</section>`;
 	
 	result	+= `</list>
 		</catalogTemplate>

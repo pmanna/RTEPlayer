@@ -2,15 +2,15 @@
 
 This project is an experiment to understand how a tvOS app would work.
 
-It's loosely based over [this Ray Wenderlich tutorial](http://www.raywenderlich.com/114886/beginning-tvos-development-with-tvml-tutorial), that in turn was based on Apple's own [TVML Catalog](https://developer.apple.com/library/prerelease/tvos/samplecode/TVMLCatalog/Introduction/Intro.html), but I wanted to try it on a _real_ feed, so I've turned to the [Ireland's RTÉ](http://www.rte.ie) feeds, as used by their mobile app.
+It's loosely based over [this Ray Wenderlich tutorial](http://www.raywenderlich.com/114886/beginning-tvos-development-with-tvml-tutorial), that in turn was based on Apple's own [TVML Catalog](https://developer.apple.com/library/prerelease/tvos/samplecode/TVMLCatalog/Introduction/Intro.html), but I wanted to try it on a _real_ feed, so I've turned to the [Ireland's RTÉ](http://www.rte.ie) feeds, as used by their mobile app on iOS.
 
 ---
 
 #Usage
 
-The app in itself is very simple, as it uses [TVML](https://developer.apple.com/library/prerelease/tvos/documentation/LanguagesUtilities/Conceptual/ATV_Template_Guide/), so all the logic and the templates are on external JavaScript files (the _OnServer_ folder) that will be made available from a HTTP server. The article linked above explains this in detail.
+The app in itself is very simple, as it uses [TVML](https://developer.apple.com/library/prerelease/tvos/documentation/LanguagesUtilities/Conceptual/ATV_Template_Guide/), so all the logic and the templates are on external JavaScript files (the _OnServer_ folder) that will be made available from a HTTP server. The article linked above explains this in detail, and I'm usually hosting them on my own server.
 
-The app just keeps links to the server itself and a few endpoints for the content.
+The native part of the app just keeps links to the server itself and a few endpoints for the content.
 
 ---
 
@@ -24,6 +24,7 @@ I haven't tried to connect from outside Ireland, so it may also be the case that
 
 ##TODO
 
- - I don't know the kind of support the TVJS framework has for Promises (a.k.a Futures), so the progressive loading of the feeds is a bit ugly right now
- - The feeds are also not refreshed automatically: it may be good to add that as well
+- Live feeds have been added, but they seem to be a bit unstable: without docs it's difficult to do more though
+- Quality isn't that good: the feeds were supposed to be consumed on an iPhone, obviously, so it's expected that they look odd on 
+- The feeds are not refreshed automatically: it may be good to add that as well
   

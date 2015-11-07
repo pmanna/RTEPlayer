@@ -23,7 +23,7 @@ THE SOFTWARE.
 */
 
 var Presenter = {
-	 makeDocument: function(resource, videoFeed) {
+	makeDocument: function(resource, videoFeed) {
 		if (!Presenter.parser) {
 			Presenter.parser = new DOMParser();
 		}
@@ -46,7 +46,8 @@ var Presenter = {
 	load: function(event) {
 		var self = this,
 			ele = event.target,
-			showId = ele.getAttribute("showid");
+			showId = ele.getAttribute("showid"),
+			showURL = ele.getAttribute("showurl");
 
 		if (showId) {
 			var xmlhttp = new XMLHttpRequest();
@@ -68,6 +69,14 @@ var Presenter = {
 
 			xmlhttp.open("GET", this.videoLocation + showId, true);
 			xmlhttp.send();
+		} else if (showURL) {
+			var player = new Player();
+			var playlist = new Playlist();
+			var mediaItem = new MediaItem("video", showURL);
+	 
+			player.playlist = playlist;
+			player.playlist.push(mediaItem);
+			player.present();
 		}
 	},
 }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D85A82621BD3A47B0038A035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85A82611BD3A47B0038A035 /* AppDelegate.swift */; };
-		D85A82641BD3A47B0038A035 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85A82631BD3A47B0038A035 /* ViewController.swift */; };
 		D85A82671BD3A47C0038A035 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D85A82651BD3A47C0038A035 /* Main.storyboard */; };
 		D85A82691BD3A47C0038A035 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D85A82681BD3A47C0038A035 /* Assets.xcassets */; };
 		D85A82741BD3A47C0038A035 /* RTEPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85A82731BD3A47C0038A035 /* RTEPlayerTests.swift */; };
@@ -35,7 +34,6 @@
 /* Begin PBXFileReference section */
 		D85A825E1BD3A47B0038A035 /* RTEPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTEPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D85A82611BD3A47B0038A035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D85A82631BD3A47B0038A035 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D85A82661BD3A47C0038A035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D85A82681BD3A47C0038A035 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D85A826A1BD3A47C0038A035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				D85A82611BD3A47B0038A035 /* AppDelegate.swift */,
-				D85A82631BD3A47B0038A035 /* ViewController.swift */,
 				D85A82651BD3A47C0038A035 /* Main.storyboard */,
 				D85A82681BD3A47C0038A035 /* Assets.xcassets */,
 				D85A826A1BD3A47C0038A035 /* Info.plist */,
@@ -252,7 +249,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D85A82641BD3A47B0038A035 /* ViewController.swift in Sources */,
 				D85A82621BD3A47B0038A035 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +468,7 @@
 				D85A82851BD3A47C0038A035 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D85A82861BD3A47C0038A035 /* Build configuration list for PBXNativeTarget "RTEPlayerTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +477,7 @@
 				D85A82881BD3A47C0038A035 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D85A82891BD3A47C0038A035 /* Build configuration list for PBXNativeTarget "RTEPlayerUITests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +486,7 @@
 				D85A828B1BD3A47C0038A035 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

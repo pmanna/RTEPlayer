@@ -37,12 +37,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
     var appController: TVApplicationController?
     
     // Substitute this with the actual server you're uploading the JS files to
+//    static let TVBaseURL = "http://www.paolomanna.com/public/rteplayer/"
     static let TVBaseURL = "http://localhost:9001/"
     
     // These are configurations for RTE
     static let TVConfURL = "http://www.rte.ie/"
     static let TVFeedURL = "http://feeds.rasset.ie/"
     static let TVImageURL = "http://img.rasset.ie/"
+    static let TVLiveURL = "http://cdn.rasset.ie/"
     static let TVBootURL = "\(AppDelegate.TVBaseURL)js/application.js"
 
 
@@ -60,6 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
         appControllerContext.launchOptions["CONFURL"] = AppDelegate.TVConfURL
         appControllerContext.launchOptions["FEEDURL"] = AppDelegate.TVFeedURL
         appControllerContext.launchOptions["IMAGEURL"] = AppDelegate.TVImageURL
+        appControllerContext.launchOptions["LIVEURL"] = AppDelegate.TVLiveURL
        
         appController = TVApplicationController(context: appControllerContext, window: window, delegate: self)
         
