@@ -25,6 +25,6 @@ I haven't tried to connect from outside Ireland, so it may also be the case that
 ##TODO
 
 - Live feeds have been added, but they seem to be a bit unstable: without docs it's difficult to do more though
-- Quality isn't that good: the feeds were supposed to be consumed on an iPhone, obviously, so it's expected that they look odd on 
+- Quality isn't that good: the feeds were supposed to be consumed on an iPhone, obviously, so it's expected that they look blocky on a Full HD screen
 - The feeds are not refreshed automatically: it may be good to add that as well
   
