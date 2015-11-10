@@ -33,9 +33,9 @@ ResourceLoader.prototype.loadTemplate = function(resource, showList, callback) {
 	var self = this;
 	evaluateScripts([resource], function(success) {
 		if(success) {
-			var resource = Template.call(self, showList);
+			var xmlTemplate = Template.call(self, showList);
 			
-			callback.call(self, resource);
+			callback.call(self, xmlTemplate);
 		} else {
 			var title = "Resource Loader Error",
 				description = `Error loading resource '${resource}'. \n\n Try again later.`,
@@ -50,7 +50,7 @@ ResourceLoader.prototype.loadFeed = function(url, callback) {
 	var xmlhttp = new XMLHttpRequest();
 
 	xmlhttp.onreadystatechange = function() {
-		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+		if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
 			var resultObj = JSON.parse(xmlhttp.responseText);
 			
 			callback(resultObj);

@@ -44,8 +44,7 @@ var Presenter = {
 	},
 	
 	load: function(event) {
-		var self = this,
-			ele = event.target,
+		var ele = event.target,
 			showId = ele.getAttribute("showid"),
 			showURL = ele.getAttribute("showurl");
 
@@ -53,7 +52,7 @@ var Presenter = {
 			var xmlhttp = new XMLHttpRequest();
 
 			xmlhttp.onreadystatechange = function() {
-				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
 					var resultObj = JSON.parse(xmlhttp.responseText);
 					var videoMetaData = resultObj.shows[0]['media:group'][0]
 

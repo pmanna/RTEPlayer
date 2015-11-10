@@ -25,14 +25,32 @@ THE SOFTWARE.
 
 var resourceLoader;
 
+var createAlert = function(title, description) {
+	var alertString = `<?xml version="1.0" encoding="UTF-8" ?>
+		<document>
+			<alertTemplate>
+				<title>${title}</title>
+				<description>${description}</description>
+					<button>
+						<text>OK</text>
+					</button>
+			</alertTemplate>
+		</document>`;
+
+		var parser = new DOMParser();
+		var alertDoc = parser.parseFromString(alertString, "application/xml");
+		
+		return alertDoc;
+}
+
 App.onLaunch = function(options) {
 	var javascriptFiles = [
 		`${options.BASEURL}js/ResourceLoader.js`, 
 		`${options.BASEURL}js/Presenter.js`
 	];
 
-	var globalConf  = `${options.CONFURL}applications/player/config/config-ios-1-8.js`;
-	var playerConf  = `${options.CONFURL}player/ie/features.js?platform=iphone`;
+	// var globalConf  = `${options.CONFURL}applications/player/config/config-ios-1-8.js`;
+	// var playerConf  = `${options.CONFURL}player/ie/features.js?platform=iphone`;
 
 	var frontFeed   = `${options.FEEDURL}rteavgen/player/latestfront/?format=json&type=mobile-iptv&platform=ipad&cl=0`;
 	var latestFeed  = `${options.FEEDURL}rteavgen/player/latest/?format=json&type=mobile-iptv&platform=ipad&cl=0`;
@@ -45,7 +63,7 @@ App.onLaunch = function(options) {
 	var fetchFeed	= function(idx, someShows) {
 		showLists[idx]  = {title: someShows.feed_title, shows: someShows.shows};
 
-		if (++feedIdx == 3) {
+		if (++feedIdx === 3) {
 			resourceLoader.loadTemplate(`${options.BASEURL}templates/RTEPlayerTemplate.xml.js`, showLists, function(resource) {
 				var doc = Presenter.makeDocument(resource, videoFeed);
 
@@ -87,22 +105,4 @@ App.onLaunch = function(options) {
 			navigationDocument.presentModal(errorDoc);
 		}
 	});
-}
-
-var createAlert = function(title, description) {
-	var alertString = `<?xml version="1.0" encoding="UTF-8" ?>
-		<document>
-			<alertTemplate>
-				<title>${title}</title>
-				<description>${description}</description>
-					<button>
-						<text>OK</text>
-					</button>
-			</alertTemplate>
-		</document>`;
-
-		var parser = new DOMParser();
-		var alertDoc = parser.parseFromString(alertString, "application/xml");
-		
-		return alertDoc;
 }
