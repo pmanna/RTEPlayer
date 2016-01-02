@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/b2d72331184b4830951c09d953a5c12a)](https://www.codacy.com/app/paolo/RTEPlayer)
 #Purpose
 
 This project is an experiment to understand how a tvOS app would work.
@@ -18,7 +19,9 @@ The native part of the app just keeps links to the server itself and a few endpo
 
 The processing of the feed is solely based on my understanding of how it's supposed to work, I've had no access to official documentation, so it may or may not work by the time you'll try the code.
 
-I haven't tried to connect from outside Ireland, so it may also be the case that the content is not available to you for copyright reasons.
+~~I haven't tried to connect from outside Ireland, so it may also be the case that the content is not available to you for copyright reasons~~.
+
+I've tested the app outside Ireland (still in Europe, though), and it works.
 
 ---
 
